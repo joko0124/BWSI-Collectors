@@ -1,0 +1,203 @@
+﻿Build1=Default,bwsi.collectors
+File1=back.png
+File10=reports.png
+File11=settings.png
+File12=sourcesanspro-black.ttf
+File13=sourcesanspro-blackitalic.ttf
+File14=sourcesanspro-bold.ttf
+File15=sourcesanspro-bolditalic.ttf
+File16=sourcesanspro-regular.ttf
+File17=sourcesanspro-semibold.ttf
+File18=sourcesanspro-semibolditalic.ttf
+File19=sync.png
+File2=collections.png
+File20=today.jpg
+File3=inquiry.png
+File4=Login.bal
+File5=Login.png
+File6=logout.png
+File7=MainScreen.bal
+File8=payment.png
+File9=promissory.png
+FileGroup1=Default Group
+FileGroup10=Default Group
+FileGroup11=Default Group
+FileGroup12=Default Group
+FileGroup13=Default Group
+FileGroup14=Default Group
+FileGroup15=Default Group
+FileGroup16=Default Group
+FileGroup17=Default Group
+FileGroup18=Default Group
+FileGroup19=Default Group
+FileGroup2=Default Group
+FileGroup20=Default Group
+FileGroup3=Default Group
+FileGroup4=Default Group
+FileGroup5=Default Group
+FileGroup6=Default Group
+FileGroup7=Default Group
+FileGroup8=Default Group
+FileGroup9=Default Group
+Group=Default Group
+Library1=core
+Library10=json
+Library11=dateutils
+Library12=runtimepermissions
+Library13=nb6
+Library14=randomaccessfile
+Library15=sql
+Library16=stringfunctions
+Library17=designsupport
+Library18=ime
+Library19=fiddlearound
+Library2=xui
+Library20=reflection
+Library21=togglewifidata
+Library22=xcustomlistview
+Library23=xmllayoutbuilder
+Library24=bitmapcreator
+Library3=appcompat
+Library4=audio
+Library5=ax_customalertviewdialog
+Library6=bignumbers
+Library7=okhttp
+Library8=okhttputils2
+Library9=network
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'For more information: http://www.b4x.com/forum/showthread.php?p=78136~\n~~\n~AddManifestText(~\n~    <uses-sdk android:minSdkVersion="5" android:targetSdkVersion="29"/>~\n~    ~\n~    <!-- Permissions -->~\n~    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>~\n~    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>~\n~    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>~\n~    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>~\n~    <uses-permission android:name="android.permission.INTERNET"/>~\n~    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>~\n~    ~\n~    <!-- Screen Support -->~\n~    <supports-screens ~\n~        android:largeScreens="true" ~\n~        android:normalScreens="true"~\n~        android:smallScreens="true"~\n~        android:anyDensity="true"/>~\n~)~\n~~\n~'<!-- Features -->~\n~AddManifestText(<uses-feature android:name="android.hardware.telephony" android:required="false" />)~\n~AddManifestText(<uses-feature android:name="android.hardware.camera" android:required="false" />)~\n~AddManifestText(<uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />)~\n~AddManifestText(<uses-feature android:name="android.hardware.camera.flash" android:required="false" />)~\n~~\n~'<!-- Libraries -->~\n~AddApplicationText(<uses-library android:name="org.apache.http.legacy" android:required="false" />)~\n~~\n~'<!-- Application Attributes -->~\n~SetManifestAttribute(android:installLocation, "auto")~\n~SetApplicationAttribute(android:usesCleartextTraffic, "true")~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~SetApplicationAttribute(android:largeHeap, "true")~\n~SetApplicationAttribute(android:allowBackup, "false")~\n~SetApplicationAttribute(android:requestLegacyExternalStorage, true)~\n~~\n~'<!-- Activity Attributes -->~\n~SetActivityAttribute(Main, android:windowSoftInputMode, adjustPan|stateHidden)~\n~SetActivityAttribute(Main, "android:excludeFromRecents", "false")~\n~~\n~'<!-- Theme -->~\n~SetApplicationAttribute(android:theme, "@style/MyAppTheme")~\n~~\n~'<!-- Colors -->~\n~CreateResource(values, colors.xml,~\n~<resources>~\n~    <color name="actionbar">#0b4f6c</color>~\n~	<color name="statusbar">#007CF5</color>~\n~    <color name="textColorPrimary">#ffffff</color>~\n~    <color name="navigationBar">#006db3</color>~\n~    <color name="colorAccent">#1E4369</color>~\n~</resources>~\n~)~\n~~\n~'<!-- Themes -->~\n~CreateResource(values, themes.xml,~\n~<resources>~\n~    <style name="MyAppTheme" parent="Theme.AppCompat.Light.NoActionBar">~\n~        <item name="colorPrimary">#0098FF</item> <!-- Action Bar Color -->~\n~        <item name="colorPrimaryDark">@color/statusbar</item> <!-- Status Bar Color -->~\n~        <item name="colorAccent">#AAAA00</item>~\n~        <item name="windowNoTitle">true</item>~\n~        <item name="windowActionBar">false</item>~\n~        <item name="android:windowDrawsSystemBarBackgrounds">true</item> <!-- Required -->~\n~        <item name="android:statusBarColor">@color/statusbar</item> <!-- Set Status Bar Color -->~\n~	</style>~\n~</resources>~\n~)~\n~~\n~'<!-- Floating Hint Style -->~\n~CreateResource(values, fle.xml,~\n~<resources>~\n~    <style name="floating_hint" parent="@style/Theme.AppCompat.Light">~\n~        <item name="android:textColor">#01579b</item>~\n~        <item name="android:textSize">16dp</item>~\n~    </style>~\n~</resources>~\n~)~\n~~\n~'<!-- Additional Permissions -->~\n~AddPermission(android.permission.ACCESS_SUPERUSER)~\n~AddPermission(android.permission.CHANGE_WIFI_STATE)~\n~AddPermission(android.permission.ACCESS_WIFI_STATE)~\n~AddPermission(android.permission.BLUETOOTH)~\n~AddPermission(android.permission.BLUETOOTH_ADMIN)~\n~AddPermission(android.permission.BLUETOOTH_PRIVILEGED)~\n~AddPermission(android.permission.BIND_PRINT_SERVICE)~\n~AddPermission(android.permission.CAMERA)~\n~AddPermission(android.permission.VIBRATE)~\n~AddPermission(android.permission.MODIFY_AUDIO_SETTINGS)
+Module1=ASBottomMenu
+Module2=GlobalVar
+Module3=MainScreen
+Module4=Starter
+NumberOfFiles=20
+NumberOfLibraries=24
+NumberOfModules=4
+Version=10
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: BWSI Collector's
+	#VersionCode: 1
+	#VersionName: Dev
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: Portrait
+	#CanInstallToExternalStorage: False
+	
+	'Dev Resources
+	#AdditionalRes: C:\B4A\Dev\resource
+	#AdditionalRes: C:\B4A\Dev\md-app\res
+	#AdditionalRes: C:\B4A\Dev\md-lib\res
+	#AdditionalRes: C:\B4A\Dev\resAX_CustomAlertViewDialog
+
+	#AdditionalJar: com.google.android.material:material
+	#AdditionalJar:WoosimLib251
+
+	#Extends: android.support.v4.widget.DrawerLayout
+	#Extends: android.support.v7.app.AppCompatActivity
+
+	#MultiDex: True
+	#BridgeLogger: True
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: True
+	#IncludeTitle: True
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+	Private xui As XUI
+	
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	Private cdTxt As ColorDrawable
+	Private btnLogin As ACButton
+	Private btnShowHide As Label
+	Private txtPassword As EditText
+	Private txtUserName As EditText
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	Activity.LoadLayout("Login")
+	cdTxt.Initialize2(Colors.White,0,0,Colors.Transparent)
+	InitControls
+	txtUserName.Text = "joko0124"
+	txtPassword.Text = "pogi"
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+#Region Objects
+Private Sub InitControls
+	txtUserName.Text = ""
+	txtPassword.Text = ""
+	txtUserName.Background = cdTxt
+	txtPassword.Background = cdTxt
+	DisableButton(btnLogin)
+End Sub
+Sub txtUserName_TextChanged (Old As String, New As String)
+	If GlobalVar.SF.Len(txtPassword.Text) <= 0 Or GlobalVar.SF.Len(txtUserName.Text) <= 0 Then
+		DisableButton(btnLogin)
+	Else
+		EnableButton(btnLogin)
+	End If
+End Sub
+
+Sub txtPassword_TextChanged (Old As String, New As String)
+	If GlobalVar.SF.Len(txtPassword.Text) <= 0 Or GlobalVar.SF.Len(txtUserName.Text) <= 0 Then
+		DisableButton(btnLogin)
+	Else
+		EnableButton(btnLogin)
+	End If
+End Sub
+
+Sub btnShowHide_Click
+	
+End Sub
+
+Sub btnLogin_Click
+	StartActivity(MainScreen)
+End Sub
+#End Region
+
+#Region Styles
+Private Sub EnableButton(v As View)
+	Dim GradButton As GradientDrawable
+	Dim Clrs(2) As Int
+	Clrs(0) = 0xFF16406E
+	Clrs(1) = 0xFF158CC4
+	If Not(GradButton.IsInitialized) Then GradButton.Initialize("RIGHT_LEFT", Clrs)
+	v.Background = GradButton
+	v.Enabled = True
+	
+	Dim jo As JavaObject = v.Background
+	If v.Background Is ColorDrawable Or v.Background Is GradientDrawable Then
+		jo.RunMethod("setCornerRadii", Array As Object(Array As Float(80, 80, 80, 80, 80, 80, 80, 80)))
+		jo.RunMethod("setStroke", Array As Object(3dip, 0xFFFFFFFF))
+	End If
+End Sub
+
+Private Sub DisableButton(v As View)
+	Dim GradButton As GradientDrawable
+	Dim Clrs(2) As Int
+	Clrs(0) = 0xFFA9A9A9
+	Clrs(1) = 0xFFD3D3D3
+	If Not(GradButton.IsInitialized) Then GradButton.Initialize("TL_BR",Clrs)
+	v.Background = GradButton
+	v.Enabled = False
+	
+	Dim jo As JavaObject = v.Background
+	If v.Background Is ColorDrawable Or v.Background Is GradientDrawable Then
+		jo.RunMethod("setCornerRadii", Array As Object(Array As Float(80, 80, 80, 80, 80, 80, 80, 80)))
+		jo.RunMethod("setStroke", Array As Object(3dip, 0xFFFFFFFF))
+	End If
+End Sub
+#End Region
